@@ -22,9 +22,9 @@ module.exports = grammar({
 
     // Grammar nodes
     _token_tree: $ => choice(
-      seq('(', repeat($._token_tree), ')'),
-      seq('[', repeat($._token_tree), ']'),
-      seq('{', repeat($._token_tree), '}'),
+      seq('(', repeat(choice(',', $._token_tree)), ')'),
+      seq('[', repeat(choice(',', $._token_tree)), ']'),
+      seq('{', repeat(choice(',', $._token_tree)), '}'),
       alias($.ident, 'ident'),
       alias($.string_lit, 'string_lit'),
     ),
