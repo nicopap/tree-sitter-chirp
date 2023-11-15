@@ -1,0 +1,13 @@
+====================
+Template definitions
+====================
+pub fn template_name() { Entity() }
+fn other_template() { Entity() }
+pub fn template_args(arg1, arg2) { Entity() }
+fn template_arg(singular) { Entity() }
+--------------------
+(chirp_file 
+	(fn (ident) (parameters) (statement))
+	(fn (ident) (parameters) (statement))
+	(fn (ident) (parameters (ident) (ident)) (statement))
+	(fn (ident) (parameters (ident)) (statement)))

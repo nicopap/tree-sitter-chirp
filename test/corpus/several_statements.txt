@@ -1,0 +1,20 @@
+==================
+Several statements
+==================
+Root {
+	"String \"Literal\"" ()
+	Entity {}
+	template_call!()
+	template_call!(argument1, other arguments)
+	BareName(){}
+	I+U()
+}
+------------------
+(chirp_file (statement (ident)
+	(statement (string_lit (escape_sequence) (escape_sequence)))
+	(statement)
+	(statement (template_call_ident))
+	(statement (template_call_ident) (argument) (argument))
+	(statement (ident))
+	(statement (ident))))
+

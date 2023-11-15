@@ -1,0 +1,18 @@
+=======
+Imports
+=======
+use "components/widgets.chirp" (button slider)
+use embedded://widgets.chirp (
+	(button as widget_button)
+	(slider as widget_slider)
+)
+-------
+(chirp_file
+	(import
+		(path (string_lit))
+		(import_item (ident))
+		(import_item (ident)))
+	(import
+		(path (ident))
+		(import_item (ident) (ident))
+		(import_item (ident) (ident))))

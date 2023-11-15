@@ -1,0 +1,14 @@
+=======
+Methods
+=======
+Entity (
+	bare_method
+	method_arg(foo + bar / 10)
+	method_n_args("Some text", 10, 0xdeaf_beef)
+)
+-------
+(chirp_file (statement
+	(method (ident))
+	(method (ident) (argument))
+	(method (ident) (argument) (argument) (argument))))
+
