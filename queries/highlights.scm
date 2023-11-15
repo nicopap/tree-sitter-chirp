@@ -1,5 +1,6 @@
 (fn (ident) @function)
 (statement (template_call_ident) @function)
+(method (ident) @function.method)
 (statement entity_name: (ident) @type)
 (parameters (ident) @variable.parameter)
 (line_comment) @comment
@@ -18,5 +19,6 @@
 "pub" @keyword
 "use" @keyword
 
+"string_lit" @string
 (string_lit) @string
 (escape_sequence) @escape
