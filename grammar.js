@@ -30,7 +30,7 @@ module.exports = grammar({
     ),
     argument: $ => repeat1($._token_tree),
     _arguments: $ => seq('(', sepBy(',', $.argument), ')'),
-    method: $ => seq($.ident, optional($._arguments)),
+    method: $ => seq(field("name", $.ident), optional($._arguments)),
     statement: $ => choice(
       seq('code', '(', $.ident, ')'),
       seq('Entity', $._statement_tail),
@@ -39,8 +39,8 @@ module.exports = grammar({
         $._arguments,
         optional($._statement_tail),
       ),
-      seq($.ident, $._statement_tail),
-      seq($.string_lit, $._statement_tail),
+      seq(field("entity_name", $.ident), $._statement_tail),
+      seq(field("entity_name", $.string_lit), $._statement_tail),
     ),
     _statement_tail: $ => choice(
       seq('(', repeat($.method), ')', optional(seq('{', repeat($.statement), '}'))),

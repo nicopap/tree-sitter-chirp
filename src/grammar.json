@@ -172,8 +172,12 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "ident"
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "ident"
+          }
         },
         {
           "type": "CHOICE",
@@ -255,8 +259,12 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "ident"
+              "type": "FIELD",
+              "name": "entity_name",
+              "content": {
+                "type": "SYMBOL",
+                "name": "ident"
+              }
             },
             {
               "type": "SYMBOL",
@@ -268,8 +276,12 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "string_lit"
+              "type": "FIELD",
+              "name": "entity_name",
+              "content": {
+                "type": "SYMBOL",
+                "name": "string_lit"
+              }
             },
             {
               "type": "SYMBOL",

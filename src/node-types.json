@@ -87,17 +87,24 @@
   {
     "type": "method",
     "named": true,
-    "fields": {},
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "argument",
-          "named": true
-        },
-        {
-          "type": "ident",
           "named": true
         }
       ]
@@ -140,7 +147,22 @@
   {
     "type": "statement",
     "named": true,
-    "fields": {},
+    "fields": {
+      "entity_name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "string_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
@@ -162,10 +184,6 @@
           "named": true
         },
         {
-          "type": "string_lit",
-          "named": true
-        },
-        {
           "type": "template_call_ident",
           "named": true
         }
@@ -174,7 +192,7 @@
   },
   {
     "type": "string_lit",
-    "named": false,
+    "named": true,
     "fields": {},
     "children": {
       "multiple": true,
